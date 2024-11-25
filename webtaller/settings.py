@@ -44,7 +44,13 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+SWAGGER_SETTINGS = {
+    'USE_SESSION_AUTH': False,
+}
 
+REDOC_SETTINGS = {
+
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
