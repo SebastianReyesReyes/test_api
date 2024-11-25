@@ -18,7 +18,11 @@ SECRET_KEY = 'DJANGO_SECRET'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com','localhost']
+ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com','localhost','https://talleres-certeros.netlify.app/']
+
+CORS_ALLOWED_ORIGINS = [
+    'https://talleres-certeros.netlify.app',
+]
 
 
 # Application definition
@@ -33,6 +37,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
+    'corsheaders',
     'test_api',
     
 ]
@@ -61,6 +66,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'webtaller.urls'
