@@ -16,7 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'DJANGO_SECRET'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com']
 
@@ -118,10 +118,15 @@ USE_TZ = True
 
 # This setting informs Django of the URI path from which your static files will be served to users
 # Here, they well be accessible at your-domain.onrender.com/static/... or yourcustomdomain.com/static/...
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = '/static/'
 
-# Si tienes directorios adicionales de archivos estáticos, agrégalos aquí
+# Directorio donde se recopilarán todos los archivos estáticos
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Directorios adicionales de archivos estáticos
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
 ]
