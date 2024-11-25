@@ -18,7 +18,7 @@ SECRET_KEY = 'DJANGO_SECRET'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com']
 
 
 # Application definition
