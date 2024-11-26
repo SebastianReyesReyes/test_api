@@ -18,12 +18,17 @@ SECRET_KEY = 'DJANGO_SECRET'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com','localhost','https://talleres-certeros.netlify.app/']
+ALLOWED_HOSTS = ['test-api-5ns8.onrender.com', '127.0.0.1', 'test-api-dev-4u46.onrender.com','localhost','https://talleres-certeros.netlify.app/','*']
 
-CORS_ALLOWED_ORIGINS = [
-    'https://talleres-certeros.netlify.app',
-]
-
+CORS_ALLOW_ALL_ORIGINS: True
+CORS_ALLOW_METHODS = (
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+)
 
 # Application definition
 

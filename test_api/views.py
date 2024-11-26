@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 class UserViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
     queryset = User.objects.all()
     serializer_class = UserSerializer
     
@@ -23,6 +24,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
     
 class TallerViewSet( viewsets.ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
     queryset = Taller.objects.all()
     serializer_class = TallerSerializer
 
@@ -35,6 +37,7 @@ class TallerViewSet( viewsets.ModelViewSet):
 
     
 class ServicioViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
     queryset = Servicio.objects.all()
     serializer_class = ServicioSerializer
     
@@ -47,6 +50,7 @@ class ServicioViewSet(viewsets.ModelViewSet):
 
     
 class ReviewViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer    
     
@@ -59,6 +63,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
 
     
 class ReviewFeedbackViewSet(viewsets.ModelViewSet):
+    permission_classes = (permissions.AllowAny,)
     queryset = ReviewFeedback.objects.all()
     serializer_class = ReviewFeedbackSerializer
 
